@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { navigationRoutes } from "../navigationRoutes";
 import { DashboardItem, DashboardType } from "../types/dashboard.types";
 import { NoResults } from "../components/NoResults/NoResults";
+import { DashboardCard } from "../components/Card/DashboardCard";
 
 export const DashboardScreen = () => {
   const [items, setItems] = useState<DashboardType[]>([]);
