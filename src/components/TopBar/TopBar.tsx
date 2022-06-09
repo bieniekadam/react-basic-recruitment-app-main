@@ -140,3 +140,5 @@ export const TopBar: () => JSX.Element = () => {
     </AppBar>
   );
 };
+
+export default TopBar;
