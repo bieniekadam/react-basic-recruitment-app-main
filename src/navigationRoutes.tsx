@@ -3,36 +3,52 @@ import React from "react";
 import { DashboardScreen } from "./screens/Dashboard";
 import { SportsScreen } from "./screens/Sports";
 import { SchedulingScreen } from "./screens/Scheduling";
+import { OrganisationsScreen } from "./screens/Organisations";
+import { CompetitionsScreen } from "./screens/Competitions";
+import { UsersScreen } from "./screens/Users";
 
-type NavigationRoute = {
+export type NavigationRoute = {
+  buttonText: string;
   path: string;
   element: JSX.Element;
 };
-type NavigationRoutes = Record<string, NavigationRoute>;
+type NavigationRoutes = Record<string, Record<string, NavigationRoute>>;
 
 export const navigationRoutes: NavigationRoutes = {
-  dashboard: {
-    path: "/",
-    element: <DashboardScreen />,
+  Management: {
+    dashboard: {
+      buttonText: "Dashboard",
+      path: "/",
+      element: <DashboardScreen />,
+    },
+    sports: {
+      buttonText: "Sports",
+      path: "/sports",
+      element: <SportsScreen />,
+    },
+    scheduling: {
+      buttonText: "Scheduling",
+      path: "/scheduling",
+      element: <SchedulingScreen />,
+    },
   },
-  sports: {
-    path: "/sports",
-    element: <SportsScreen />,
+  Planning: {
+    competitions: {
+      buttonText: "Competitions",
+      path: "/competitions",
+      element: <CompetitionsScreen />,
+    },
+    organisations: {
+      buttonText: "Organisations",
+      path: "/orgnisations",
+      element: <OrganisationsScreen />,
+    },
   },
-  // scheduling: {
-  //   path: "/scheduling",
-  //   element: <Scheduling />,
-  // },
-  // competitions: {
-  //   path: "/competetions",
-  //   element: <Competitions />,
-  // },
-  // organisations: {
-  //   path: "/orgnisations",
-  //   element: <Organisations />,
-  // },
-  // users: {
-  //   path: "/users",
-  //   element: <Users />,
-  // },
+  People: {
+    users: {
+      buttonText: "Users",
+      path: "/users",
+      element: <UsersScreen />,
+    },
+  },
 };

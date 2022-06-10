@@ -42,7 +42,9 @@ function App(): any {
           <CssBaseline />
           <AppBar
             position="fixed"
-            sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
+            sx={{
+              zIndex: (theme) => theme.zIndex.drawer + 1,
+            }}
           >
             <Toolbar>
               <Typography variant="h6" noWrap component="div">
@@ -50,6 +52,7 @@ function App(): any {
               </Typography>
             </Toolbar>
           </AppBar>
+          {/* <TopBar /> */}
           <Drawer
             variant="permanent"
             sx={{
@@ -64,7 +67,7 @@ function App(): any {
             <Toolbar />
             <Box sx={{ overflow: "auto" }}>
               <List>
-                {["Inbox", "Starred", "Send email", "Drafts"].map(
+                {/* {["Inbox", "Starred", "Send email", "Drafts"].map(
                   (text, index) => (
                     <ListItem key={text} disablePadding>
                       <ListItemButton>
@@ -75,25 +78,14 @@ function App(): any {
                       </ListItemButton>
                     </ListItem>
                   )
-                )}
-              </List>
-              <Divider />
-              <List>
-                {["All mail", "Trash", "Spam"].map((text, index) => (
-                  <ListItem key={text} disablePadding>
-                    <ListItemButton>
-                      <ListItemIcon>
-                        {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                      </ListItemIcon>
-                      <ListItemText primary={text} />
-                    </ListItemButton>
-                  </ListItem>
-                ))}
+                )} */}
+                <LeftNavigation />
               </List>
             </Box>
           </Drawer>
           <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
             <Toolbar />
+
             <DashboardScreen />
           </Box>
         </Box>
@@ -105,15 +97,15 @@ function App(): any {
 //   return (
 //     <ThemeProvider theme={theme}>
 //       <BrowserRouter>
-// //         <TopBar />
+//         <TopBar />
 
-// //         <Grid container>
-// //           <Grid item sx={{ width: 200 }}>
-// //             <LeftNavigation />
-// //           </Grid>
-// //           <Grid item xs>
-// //             <Routes>
-// //               {Object.values(navigationRoutes).map((route) => (
+//         <Grid container>
+//           <Grid item sx={{ width: 200 }}>
+//             <LeftNavigation />
+//           </Grid>
+//           <Grid item xs>
+//             <Routes>
+//               {Object.values(navigationRoutes).map((route) => (
 //                 <Route
 //                   key={route.path}
 //                   path={route.path}
