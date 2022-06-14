@@ -1,3 +1,5 @@
+import React from "react";
+
 export const OrganisationsScreen = () => {
-  return <div>Page not found 404</div>;
+  return <div>Organisations is working!</div>;
 };

@@ -26,21 +26,21 @@ export const navigationRoutes: NavigationRoutes = {
       path: "/sports",
       element: <SportsScreen />,
     },
-    scheduling: {
-      buttonText: "Scheduling",
-      path: "/scheduling",
-      element: <SchedulingScreen />,
-    },
-  },
-  Planning: {
     competitions: {
       buttonText: "Competitions",
       path: "/competitions",
       element: <CompetitionsScreen />,
     },
+  },
+  Planning: {
+    scheduling: {
+      buttonText: "Scheduling",
+      path: "/scheduling",
+      element: <SchedulingScreen />,
+    },
     organisations: {
       buttonText: "Organisations",
-      path: "/orgnisations",
+      path: "/organisations",
       element: <OrganisationsScreen />,
     },
   },

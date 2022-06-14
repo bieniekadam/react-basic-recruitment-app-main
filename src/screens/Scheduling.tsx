@@ -1,3 +1,5 @@
+import React from "react";
+
 export const SchedulingScreen = () => {
-  return <div>Page not found 404</div>;
+  return <div>Scheduling is working!</div>;
 };

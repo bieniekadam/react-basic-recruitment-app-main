@@ -32,6 +32,13 @@ export const customOverridesLight: MsfpThemeOptions = {
   },
   typography: {
     fontFamily: ["Roboto", "Helvetica", "Arial", "sans-serif"].join(","),
+    button: {
+      fontSize: "8",
+      color: "#FF7F00",
+    },
+    body1: {
+      color: "black",
+    },
   },
 };
 
@@ -57,6 +64,12 @@ export const customOverridesDark: MsfpThemeOptions = {
   },
   typography: {
     fontFamily: ["Roboto", "Helvetica", "Arial", "sans-serif"].join(","),
+    button: {
+      fontSize: "4",
+    },
+    body1: {
+      color: "black",
+    },
   },
 };
 
