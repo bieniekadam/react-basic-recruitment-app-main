@@ -1,3 +1,5 @@
+import React from "react";
+
 export const UsersScreen = () => {
-  return <div>Page not found 404</div>;
+  return <div>Users is working!</div>;
 };

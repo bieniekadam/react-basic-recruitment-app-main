@@ -13,6 +13,9 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import Logo from "../../images/logo.svg";
 import { createTheme } from "@mui/material/styles";
+import { Link } from "@material-ui/core";
+import { navigationRoutes } from "../../navigationRoutes";
+import { NavigationRoute } from "../../navigationRoutes";
 
 export const TopBar: () => JSX.Element = () => {
   const pages = ["Products", "Pricing", "Blog"];
@@ -39,6 +42,25 @@ export const TopBar: () => JSX.Element = () => {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+
+  // export const LeftNavigation = (props: {}) => {
+  //   return (
+
+  //     <>
+  //       {Object.entries(navigationRoutes).map(([categoryName, category]) => {
+  //         return (
+  //           <>
+  //             {Object.values(category).map(
+  //               (navigation: NavigationRoute, index) => (
+
+  //               )
+  //             )}
+  //           </>
+  //         );
+  //       })}
+  //     </>
+  //   );
+  // };
 
   return (
     <AppBar position="static">
@@ -79,7 +101,8 @@ export const TopBar: () => JSX.Element = () => {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  {" "}
+                  <Typography textAlign="center">{page}</Typography>{" "}
                 </MenuItem>
               ))}
             </Menu>

@@ -1,3 +1,5 @@
+import React from "react";
+
 export const CompetitionsScreen = () => {
-  return <div>Page not found 404</div>;
+  return <div>Competitions is working!</div>;
 };
